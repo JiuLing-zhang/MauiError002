@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiError002.MainPage">
+
+    <Grid
+        RowDefinitions="30,50,50">
+        <Label
+            Grid.Row="0"
+            Text="Label 1 (Not in FlexLayout, not setting HeightRequest)"/>
+        <FlexLayout
+            Grid.Row="1"
+            Wrap="Wrap"
+            AlignContent="Start">
+            <Label
+                Text="Label 2 (In FlexLayout, not setting HeightRequest)"/>
+            <Label
+                Text="Label 3"/>
+        </FlexLayout>
+        <FlexLayout
+            Grid.Row="2"
+            Wrap="Wrap"
+            AlignContent="Start">
+            <Label
+                Text="Label 4 (In FlexLayout, setting HeightRequest)"
+                HeightRequest="30"/>
+            <Label
+                Margin="20,0,0,0"
+                Text="Label 5"/>
+        </FlexLayout>
+    </Grid>
+</ContentPage>
